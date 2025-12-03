@@ -1,0 +1,24 @@
+{
+  "name": "@svkruik/sk-platform-formatters",
+  "description": "A set of some formatters and parsers that are used across SK Platform apps.",
+  "version": "0.0.1",
+  "author": "Stefan Kruik",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/SVKruik-Organization/SK-Platform-Formatters.git"
+  },
+  "bugs": {
+    "url": "https://github.com/SVKruik-Organization/SK-Platform-Formatters/issues"
+  },
+  "homepage": "https://github.com/SVKruik-Organization/SK-Platform-Formatters#readme",
+  "license": "MIT",
+  "scripts": {
+    "build": "npx tsc"
+  },
+  "types": "index.d.ts",
+  "devDependencies": {
+    "@types/node": "^20.12.7",
+    "ts-node": "^10.9.2",
+    "typescript": "^5.4.5"
+  }
+}
