@@ -1,6 +1,9 @@
 # SK Platform - Formatters
 
-A set of some input formatters that are used across SK Platform apps.
+[![Publish Package](https://github.com/SVKruik-Organization/SK-Platform-Formatters/actions/workflows/publish.yml/badge.svg)](https://github.com/SVKruik-Organization/SK-Platform-Formatters/actions/workflows/publish.yml)
+[![NPM Version](https://img.shields.io/npm/v/%40svkruik%2Fsk-platform-formatters?label=%40svkruik%2Fsk-platform-formatters&color=green)](https://www.npmjs.com/package/@svkruik/sk-platform-formatters)
+
+A set of some formatters and parsers that are used across SK Platform apps.
 
 ---
 
