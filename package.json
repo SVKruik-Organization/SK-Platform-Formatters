@@ -1,7 +1,7 @@
 {
   "name": "@svkruik/sk-platform-formatters",
   "description": "A set of some formatters and parsers that are used across SK Platform apps.",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "author": "Stefan Kruik",
   "repository": {
     "type": "git",
