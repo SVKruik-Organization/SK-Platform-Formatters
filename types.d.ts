@@ -1,5 +1,5 @@
 // Date and Time
-export function formatDate(datetime: Date | null, preferredLocale: string | null): FormattedDate;
+export function formatDate(datetime?: Date, preferredLocale?: Intl.Locale): FormattedDate;
 export function formatTime(value: number): string;
 export function formatTimeAgo(date: Date): string;
 export function formatDifference(dateFuture: Date, datePast: Date): DateDifference;
@@ -18,6 +18,6 @@ export function formatNumber(num: number): string;
 export function createTicket(overwriteLimit?: number): string;
 
 export type LogType = "warning" | "alert" | "info" | "success" | "none" | "fatal" | "error";
-export type FormattedDate = { date: string; time: string; today: Date };
+export type FormattedDate = { date: string; time: string; today: Date, fullDate: string };
 export type DateDifference = { hours: number; minutes: number };
 export type DatetimeOptions = { dateSeparator?: string; timeSeparator?: string };

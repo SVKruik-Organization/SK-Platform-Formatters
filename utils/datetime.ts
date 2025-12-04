@@ -7,7 +7,7 @@ import { DateDifference, DatetimeOptions, FormattedDate } from "../types";
  * @param preferredLocale Overwrite default locale.
  * @returns Object with date, time and now.
  */
-export function formatDate(datetime: Date | null = null, preferredLocale: Intl.Locale | null = null): FormattedDate {
+export function formatDate(datetime?: Date, preferredLocale?: Intl.Locale): FormattedDate {
     const targetDate: Date = datetime || new Date();
     const locale: Intl.Locale = preferredLocale || new Intl.Locale("en-US");
 
@@ -24,8 +24,9 @@ export function formatDate(datetime: Date | null = null, preferredLocale: Intl.L
 
     const date: string = `${dd}-${mm}-${yyyy}`;
     const time: string = `${hh}:${m}`;
+    const fullDate: string = `${time} ${date}`;
 
-    return { date, time, today };
+    return { date, time, today, fullDate };
 }
 
 /**
@@ -109,7 +110,7 @@ export function datetimeParser(rawDate: string, rawTime: string, options?: Datet
         throw new Error("Invalid date or time provided (1).");
 
     const fullDate: Date = new Date(year, month - 1, day, hour, minute);
-    if (isNaN(fullDate.getTime()) || fullDate < formatDate(null, null).today)
+    if (isNaN(fullDate.getTime()) || fullDate < formatDate().today)
         throw new Error("Invalid date or time provided (2).");
 
     return fullDate;

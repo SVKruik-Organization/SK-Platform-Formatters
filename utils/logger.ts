@@ -13,7 +13,7 @@ export function logData(data: string, type: LogType): void {
     let payload: string;
     if (type === "none") {
         payload = `${data}\n`;
-    } else payload = `${formatDate(null, null).time} [${type.toUpperCase()}] ${data}\n`;
+    } else payload = `${formatDate().time} [${type.toUpperCase()}] ${data}\n`;
 
     console.log(payload);
     write(payload);
@@ -25,7 +25,7 @@ export function logData(data: string, type: LogType): void {
  * @param data The error to write to the file.
  */
 export function logError(data: Error | any): void {
-    const payload: string = `${formatDate(null, null).time} [ERROR] ${typeof data === "string" ? data : data.stack}\n`;
+    const payload: string = `${formatDate().time} [ERROR] ${typeof data === "string" ? data : data.stack}\n`;
     console.log(payload);
     write(payload);
 }
@@ -36,7 +36,7 @@ export function logError(data: Error | any): void {
  * @param data The text to write to the file.
  */
 function write(data: string): void {
-    const date: FormattedDate = formatDate(null, null);
+    const date: FormattedDate = formatDate();
     const logsDir: string = resolve(process.cwd(), "logs");
 
     if (!existsSync(logsDir)) mkdirSync(logsDir);
